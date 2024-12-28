@@ -7,7 +7,7 @@ export function HeroText() {
     <div className="space-y-8 ">
        <ThemeToggle />
       <div>
-        <h1 className="text-6xl md:text-8xl font-serif text-gray-900 dark:text-white mb-4 mt-[150px] md:mt-0">
+        <h1 className="text-6xl md:text-8xl font-serif text-gray-900 dark:text-white mb-4 mt-[150px] sm:mt-0">
           between
           <span className="block">Reality</span>
           <span className="block">&amp; Dream</span>
