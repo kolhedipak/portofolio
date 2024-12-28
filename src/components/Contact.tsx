@@ -1,12 +1,12 @@
 import React, { useState, useRef  } from 'react';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import toast from 'react-hot-toast';
+import toast, {Toaster} from 'react-hot-toast';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     subject: '',
     message: ''
   });
@@ -27,12 +27,17 @@ export default function Contact() {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
       toast.success('Message sent successfully');
-      console.log('Message sent successfully');
       formRef.current.reset();
+      setFormData({
+        user_name: '',
+        user_email: '',
+        subject: '',
+        message: ''
+      });
     }catch(error){
       toast.error('Failed to send message. Please try again');
     }
-    console.log('Form submitted:', formData);
+
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -64,8 +69,8 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="user_name"
+                    value={formData.user_name}
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
@@ -77,8 +82,8 @@ export default function Contact() {
                   </label>
                   <input
                     type="email"
-                    name="email"
-                    value={formData.email}
+                    name="user_email"
+                    value={formData.user_email}
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
@@ -123,6 +128,7 @@ export default function Contact() {
                 <Send className="ml-2 h-5 w-5" />
               </button>
             </form>
+            <Toaster />
           </div>
 
           <div className="space-y-8">

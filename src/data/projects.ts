@@ -47,8 +47,8 @@ export const projects: Project[] = [
     description: ' A responsive portfolio website with a theme toggle and a contact form powered by EmailJS for easy communication.',
     image: portfolio,
     tech: ['React', 'Tailwind css', 'Typescript','EmailJs'],
-    demo: '',
-    github: '',
+    demo: 'https://dipakkolhe.netlify.app/',
+    github: 'https://github.com/kolhedipak/portofolio',
     longDescription: 'A dynamic portfolio website built with React, Tailwind CSS featuring a theme toggle for light and dark modes, and a contact form integrated with EmailJS for seamless communication. The app showcases personal projects and skills, providing an interactive and professional online presence'
   },
 
