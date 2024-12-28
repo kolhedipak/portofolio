@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { projects, Project } from '../data/projects';
 import ProjectCard from './projects/ProjectCard';
 import ProjectModal from './projects/ProjectModal';

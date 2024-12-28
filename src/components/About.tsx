@@ -1,5 +1,6 @@
 
 import { Code2, Rocket, Users } from 'lucide-react';
+import dev from "../components/assets/dev-photo.jpg";
 
 const stats = [
   { label: 'Years Experience', value: '3+', icon: Code2 },
@@ -9,7 +10,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white dark:bg-black">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -21,13 +22,14 @@ export default function About() {
             </div>
             
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              As a Full Stack Developer with 3+ years of experience, I specialize in building 
-              scalable web applications that combine elegant design with robust functionality.
+              As a Full Stack Developer with 3+ years of experience, in React, TypeScript, Tailwind CSS, and Azure. 
+              I focus on building dynamic, user-friendly web applications that solve problems and enhance user experience.
+               Always eager to learn and improve, I thrive on collaboration and delivering quality solutions. 
+               Let’s connect if you're looking for someone proactive and results-driven!
             </p>
             
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              My approach combines technical expertise with creative problem-solving, 
-              ensuring that each project not only meets but exceeds expectations.
+            Let’s connect if you're looking for someone proactive and results-driven!
             </p>
 
             <div className="grid grid-cols-3 gap-8">
@@ -44,7 +46,7 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=800"
+                src={dev}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
